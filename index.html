@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NO AL BULLYING | El respeto no se negocia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&family=Permanent+Marker&display=swap');
+:root{--bg:#101010;--panel:#1b1b1b;--paper:#e8e4d8;--red:#e33b32;--yellow:#e8df38;--muted:#aaa69d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Inter,Arial,sans-serif;line-height:1.6}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");z-index:5}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;background:#111;position:sticky;top:0;z-index:10}
+.logo{font-family:Anton,sans-serif;letter-spacing:2px;color:var(--yellow);font-size:23px}.logo span{color:var(--red)}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:var(--paper);text-decoration:none;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px}nav a:hover{color:var(--yellow)}
+.hero{min-height:560px;padding:90px 8% 80px;display:flex;align-items:center;background:linear-gradient(100deg,rgba(0,0,0,.94),rgba(0,0,0,.5)),repeating-linear-gradient(135deg,#242424 0 2px,#111 2px 8px);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-40px;bottom:-95px;width:430px;height:430px;border:32px solid var(--red);transform:rotate(-17deg);opacity:.75}
+.hero-inner{max-width:850px;position:relative;z-index:1}.tag{font-family:"Permanent Marker",cursive;color:var(--yellow);font-size:17px;transform:rotate(-2deg);display:inline-block}
+h1{font-family:Anton,Impact,sans-serif;font-size:clamp(66px,12vw,142px);line-height:.88;letter-spacing:1px;margin:22px 0;text-transform:uppercase;text-shadow:5px 5px 0 var(--red)}
+h1 span{color:var(--yellow);display:block}.hero p{max-width:620px;font-size:18px;color:#d0ccc3}.stamp{display:inline-block;border:3px solid var(--red);color:var(--red);font-family:Anton,sans-serif;font-size:20px;padding:7px 14px;transform:rotate(-4deg);margin-top:16px}
+section{padding:75px 8%;max-width:1250px;margin:auto}.eyebrow{color:var(--red);font-family:"Permanent Marker",cursive;font-size:16px}h2{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(38px,6vw,64px);line-height:1;margin:8px 0 25px;letter-spacing:1px}h2 em{color:var(--yellow);font-style:normal}
+.intro{max-width:800px;color:#c5c0b6;font-size:17px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:30px}
+.card{background:var(--panel);border:1px solid #393939;padding:23px;position:relative;box-shadow:5px 5px 0 #080808}.card:before{content:"";position:absolute;top:0;left:0;width:7px;height:100%;background:var(--red)}.card h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:25px;margin:0 0 8px;color:var(--yellow)}.card p{margin:0;color:#c7c2b9}
+.band{background:var(--red);color:#111;max-width:none;padding:42px 8%;text-align:center}.band h2{font-size:clamp(35px,6vw,58px);margin:0}.band p{font-weight:700;max-width:800px;margin:10px auto 0}
+.steps{counter-reset:step}.step{display:flex;gap:18px;align-items:flex-start;margin:18px 0;padding:18px;background:#191919;border-bottom:2px solid #444}.num{font-family:Anton,sans-serif;color:var(--red);font-size:38px;line-height:1}
+.quote{font-family:"Permanent Marker",cursive;color:var(--yellow);font-size:clamp(24px,4vw,38px);text-align:center;padding:55px 12%;border-top:1px dashed #555;border-bottom:1px dashed #555}
+button{background:var(--yellow);border:0;padding:13px 20px;font-weight:900;text-transform:uppercase;cursor:pointer;margin-top:15px}button:hover{background:var(--red);color:white}
+.quiz{background:#1b1b1b;padding:25px;border:1px solid #444;max-width:720px}.quiz label{display:block;padding:9px;margin:6px 0;background:#252525;cursor:pointer}.result{font-weight:800;margin-top:12px;color:var(--yellow)}
+footer{padding:35px 8%;background:#080808;color:#aaa;text-align:center;border-top:3px solid var(--red)}footer strong{font-family:Anton,sans-serif;color:var(--yellow);font-size:24px;letter-spacing:2px}
+
+figure.foto{margin:30px 0 0;background:var(--panel);border:1px solid #393939;box-shadow:5px 5px 0 #080808}
+figure.foto img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover}
+figure.foto figcaption{padding:10px 14px;font-size:13px;color:var(--muted);border-top:3px solid var(--red)}
+.fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px}.fotos figure.foto{margin:0}
+.video-box{position:relative;width:100%;max-width:900px;aspect-ratio:16/9;border:4px solid var(--red);box-shadow:8px 8px 0 #080808;background:#000;margin-top:25px}.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-nota{color:var(--muted);font-size:14px;margin-top:14px}
+.refs{max-width:900px;margin:30px auto 0;text-align:left;border-top:1px dashed #444;padding-top:20px}.refs h4{font-family:Anton,sans-serif;color:var(--yellow);letter-spacing:1px;font-size:20px;margin:0 0 12px;text-transform:uppercase}
+.refs p{font-size:13px;color:#bdb9b0;margin:0 0 10px;padding-left:2em;text-indent:-2em;word-break:break-word}.refs a{color:var(--yellow)}
+.creditos{margin-top:28px;padding-top:18px;border-top:3px solid var(--red);font-size:15px;color:var(--paper)}.creditos span{display:block;color:var(--muted)}
+
+.art{display:inline-block;background:var(--red);color:#111;font-family:Anton,sans-serif;letter-spacing:1px;font-size:14px;padding:2px 9px;margin-bottom:10px}
+.sub{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(26px,4vw,36px);color:var(--yellow);margin:48px 0 6px;letter-spacing:1px}
+.lista-san{list-style:none;margin:20px 0 0;padding:0;counter-reset:san;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.lista-san li{counter-increment:san;background:#191919;border:1px solid #393939;padding:12px 14px 12px 52px;position:relative;color:#c7c2b9}
+.lista-san li:before{content:counter(san);position:absolute;left:12px;top:8px;font-family:Anton,sans-serif;font-size:26px;color:var(--red)}
+.lista-san li.grave{border-color:var(--red);background:#2a1514;color:var(--paper);font-weight:700}
+.aviso{margin-top:34px;padding:16px 18px;border:2px dashed var(--yellow);color:#d0ccc3;font-size:14px}
+.aviso strong{color:var(--yellow)}
+@media(max-width:700px){header{align-items:flex-start;gap:12px;flex-direction:column}nav{gap:10px}.hero{min-height:500px;padding-top:65px}.hero:after{width:230px;height:230px;border-width:18px;right:-100px}}
+</style>
+</head>
+<body>
+<header><div class="logo">RUIDO <span>CONTRA</span> EL BULLYING</div><nav><a href="#que-es">Qué es</a><a href="#video">Video</a><a href="#tipos">Tipos</a><a href="#reglamento">Reglamento</a><a href="#actuar">Qué hacer</a><a href="#compromiso">Compromiso</a></nav></header>
+<main>
+<div class="hero"><div class="hero-inner"><span class="tag">NO ES BROMA SI LASTIMA</span><h1>NO AL <span>BULLYING</span></h1><p>Que se escuche fuerte: nadie merece ser humillado, excluido o intimidado. El respeto no te quita personalidad; demuestra quién eres.</p><div class="stamp">EL SILENCIO NO AYUDA</div></div></div>
+<section id="que-es"><div class="eyebrow">01 / PONERLE NOMBRE</div><h2>¿QUÉ ES EL <em>BULLYING?</em></h2><p class="intro">Es una forma de agresión que se repite y busca lastimar, intimidar o excluir a alguien. Suele existir un desequilibrio de poder: la persona afectada tiene dificultades para defenderse. No es una simple broma cuando alguien está sufriendo.</p><div class="grid"><article class="card"><h3>Se repite</h3><p>No ocurre una sola vez: las agresiones se mantienen con el tiempo.</p></article><article class="card"><h3>Busca dañar</h3><p>Puede tener intención de humillar, asustar o hacer sentir menos a otra persona.</p></article><article class="card"><h3>Hay desigualdad</h3><p>Quien agrede puede aprovechar su fuerza, popularidad, grupo o influencia.</p></article></div><figure class="foto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%ADa_Mundial_Contra_el_Bullying.png?width=1000" alt="Imagen del Día Mundial Contra el Bullying" loading="lazy"><figcaption>Día Mundial Contra el Bullying. Fuente: Wikimedia Commons (ver referencias al final).</figcaption></figure></section>
+<div class="band"><h2>NO ES CARRILLA SI SOLO UNO SE RÍE.</h2><p>Una amistad se basa en confianza y respeto, no en aguantar humillaciones para encajar.</p></div>
+<section id="video"><div class="eyebrow">VIDEO / HECHO POR NOSOTROS</div><h2>MIRA NUESTRO <em>VIDEO</em></h2><p class="intro">Este video es de elaboración propia. Dale play y compártelo para que más personas se sumen al No al bullying.</p><div class="video-box"><iframe src="https://www.youtube.com/embed/_9x9UP9MEzo" title="NO AL BULLYNG - campaña contra el bullyng" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div><p class="video-nota">¿No carga? <a href="https://youtu.be/_9x9UP9MEzo" target="_blank" rel="noopener" style="color:var(--yellow)">Míralo directamente en YouTube</a>.</p></section>
+<section id="tipos"><div class="eyebrow">02 / IDENTIFÍCALO</div><h2>NO TODO GOLPE <em>ES FÍSICO</em></h2><div class="grid"><article class="card"><h3>Físico</h3><p>Golpear, empujar, patear, esconder o dañar las pertenencias de alguien.</p></article><article class="card"><h3>Verbal</h3><p>Insultos, apodos ofensivos, amenazas o burlas constantes.</p></article><article class="card"><h3>Social</h3><p>Excluir a propósito, difundir rumores o convencer a otros de rechazar a alguien.</p></article><article class="card"><h3>Psicológico</h3><p>Intimidar, manipular, avergonzar o hacer que alguien viva con miedo.</p></article><article class="card"><h3>Cibernético</h3><p>Hostigar por mensajes, publicar contenido para humillar o crear cuentas para atacar.</p></article></div><div class="fotos"><figure class="foto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bullying%20F%C3%ADsico.JPG?width=1000" alt="Ilustración de bullying físico" loading="lazy"><figcaption>Bullying físico. Fuente: Wikimedia Commons (ver referencias al final).</figcaption></figure><figure class="foto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bullying%20Verbal.JPG?width=1000" alt="Ilustración de bullying verbal" loading="lazy"><figcaption>Bullying verbal. Fuente: Wikimedia Commons (ver referencias al final).</figcaption></figure></div></section>
+<section><div class="eyebrow">03 / LAS CONSECUENCIAS</div><h2>LAS PALABRAS <em>TAMBIÉN PESAN</em></h2><p class="intro">El bullying puede afectar la confianza, la tranquilidad, las amistades y el rendimiento escolar. También puede hacer que alguien deje de participar o tenga miedo de asistir a clases. Por eso no debe minimizarse ni justificarse como “cosas de la escuela”.</p></section>
+<section id="reglamento"><div class="eyebrow">04 / LO DICE EL REGLAMENTO</div><h2>EL BULLYING <em>TIENE CONSECUENCIAS</em></h2><p class="intro">El Reglamento Escolar de la Universidad Autónoma del Estado de Hidalgo (aprobado el 20 de octubre de 2018, Acta 348) es obligatorio para toda la comunidad universitaria. Aquí te resumimos qué normas viola el bullying y qué pasa con quien lo comete.</p>
+
+<h3 class="sub">Normas que se violan</h3>
+<div class="grid">
+<article class="card"><span class="art">ART. 31, FR. IX</span><h3>Bullying prohibido</h3><p>Realizar bullying contra cualquier miembro de la comunidad universitaria está expresamente señalado como conducta que va contra los principios y valores de la Universidad.</p></article>
+<article class="card"><span class="art">ART. 31, FR. VII</span><h3>Faltas de respeto y violencia</h3><p>Faltar al respeto, usar violencia o amenazar con ejercerla contra cualquier integrante de la comunidad.</p></article>
+<article class="card"><span class="art">ART. 31, FR. VIII</span><h3>Acoso y hostigamiento</h3><p>Acosar u hostigar, sexual o moralmente, a cualquier miembro de la comunidad universitaria.</p></article>
+<article class="card"><span class="art">ART. 31, FR. X</span><h3>Violencia cibernética</h3><p>Generar, difundir o replicar discurso de odio, chantaje sexual, difamación o violencia cibernética en perjuicio de alguien. El glosario la define como el uso de redes, mensajes, imágenes o videos que dañen la dignidad, integridad o libertad.</p></article>
+<article class="card"><span class="art">ART. 31, FR. XII</span><h3>Contra la integridad moral</h3><p>Cometer actos contrarios a la integridad moral y al respeto que se deben entre sí los miembros de la comunidad.</p></article>
+<article class="card"><span class="art">ART. 30, FR. III, XII Y XIII</span><h3>Obligaciones del alumnado</h3><p>Respetar la normativa, abstenerse de dañar los valores de respeto y responsabilidad, y respetar a toda la comunidad en un marco de tolerancia.</p></article>
+</div>
+
+<h3 class="sub">Derechos de quien es víctima</h3>
+<div class="grid">
+<article class="card"><span class="art">ART. 29</span><h3>Trato digno</h3><p>Todo el alumnado tiene derecho a recibir un trato equitativo con respeto a la diversidad, a ser respetado por la comunidad y a no ser insultado ni violentado (fr. I, IX y X).</p></article>
+<article class="card"><span class="art">ART. 29, FR. XI · ART. 85</span><h3>Queja ante el Defensor</h3><p>Si sientes que tus derechos fueron vulnerados, puedes presentar una queja ante el Defensor Universitario, quien puede recomendar medidas de aseguramiento, suspensión y protección.</p></article>
+<article class="card"><span class="art">ART. 29, FR. IV</span><h3>Apoyo psicológico</h3><p>Tienes derecho a recibir asesoría y evaluación psicológica preliminar o básica.</p></article>
+</div>
+
+<h3 class="sub">Sanciones que contempla el reglamento</h3>
+<p class="intro">El artículo 32 enumera las sanciones posibles por las conductas del artículo 31:</p>
+<ol class="lista-san">
+<li>Amonestación por escrito</li>
+<li>Reposición del bien dañado o extraviado</li>
+<li>Reparación del daño al patrimonio de la Universidad</li>
+<li>Sanción económica por el costo del bien dañado</li>
+<li>Sanción económica de 1 a 10 UMA (por faltas a normas de seguridad e higiene)</li>
+<li>Labor social universitaria hasta por 6 meses</li>
+<li>Suspensión temporal de la condición de alumno hasta por 6 meses</li>
+<li>Anulación de calificaciones obtenidas de forma fraudulenta</li>
+<li class="grave">Baja definitiva de la Universidad</li>
+</ol>
+<div class="band" style="margin-top:30px;padding:30px 6%"><h2 style="font-size:clamp(26px,5vw,42px)">PARA EL BULLYING: BAJA DEFINITIVA</h2><p>El artículo 35 (fr. VI) establece que, tratándose de bullying (art. 31, fr. IX), se aplica la sanción de baja definitiva. Lo mismo para faltas de respeto con violencia o amenazas, acoso u hostigamiento, violencia cibernética y actos contra la integridad moral.</p></div>
+<p class="intro" style="margin-top:20px">Además, según el artículo 33, las sanciones se aplican de acuerdo con la gravedad y pueden aumentar si las conductas se repiten o buscan causar un daño mayor.</p>
+
+<h3 class="sub">Consecuencias académicas</h3>
+<div class="grid">
+<article class="card"><h3>Sales de la escuela</h3><p>La baja es la separación de las actividades académicas del alumnado en la Universidad (art. 96).</p></article>
+<article class="card"><h3>No puedes volver</h3><p>La baja impuesta por el órgano competente impide el ingreso y el reingreso a la Universidad (art. 102, fr. II).</p></article>
+<article class="card"><h3>También a egresados</h3><p>Las sanciones aplican incluso a egresados, sin perjuicio de acciones civiles, administrativas y penales que la Universidad pueda ejercer (art. 32).</p></article>
+<article class="card"><h3>Queda registrado</h3><p>Las bajas se registran y comunican en los sistemas de información de la Dirección de Administración Escolar (art. 108).</p></article>
+</div>
+
+<h3 class="sub">¿Cómo se aplica una sanción?</h3>
+<div class="steps">
+<div class="step"><div class="num">01</div><div><strong>Se abre el procedimiento.</strong><br>El titular de la unidad académica tiene 3 días hábiles, desde que conoce la conducta, para iniciarlo (art. 35).</div></div>
+<div class="step"><div class="num">02</div><div><strong>Se integra un expediente.</strong><br>Con el acta de los hechos, las pruebas, el derecho de audiencia del alumno y sus pruebas, el análisis y la resolución (art. 34).</div></div>
+<div class="step"><div class="num">03</div><div><strong>Defensa y resolución.</strong><br>El alumno tiene hasta 3 días para presentar pruebas; la resolución se emite en máximo 10 días hábiles y se notifica en los 3 días hábiles siguientes (art. 35).</div></div>
+<div class="step"><div class="num">04</div><div><strong>Revisión de la baja definitiva.</strong><br>El titular la solicita al Consejo Técnico y el acta pasa a la Comisión de Honor y Justicia del Honorable Consejo Universitario, que dictamina si es válida (art. 36).</div></div>
+<div class="step"><div class="num">05</div><div><strong>Derecho a defenderse.</strong><br>Quien sea sancionado puede pedir la presencia del defensor universitario y presentar una queja en un plazo de 5 días hábiles tras la notificación (art. 36 y 38).</div></div>
+</div>
+
+<div class="aviso"><strong>Importante:</strong> esta sección es un resumen informativo del texto vigente del Reglamento Escolar (aprobado en 2018 y publicado en abril de 2019). Para un caso real, acude con tus docentes, orientación escolar, la dirección de tu escuela o el Defensor Universitario.</div>
+</section>
+<section id="actuar"><div class="eyebrow">05 / NO TE QUEDES CRUZADO DE BRAZOS</div><h2>¿QUÉ PUEDES <em>HACER?</em></h2><div class="steps"><div class="step"><div class="num">01</div><div><strong>Si te está pasando:</strong><br>Busca a una persona adulta de confianza, docente u orientación escolar. Cuenta lo que sucede y guarda evidencia si ocurre en internet. No tienes que resolverlo a solas.</div></div><div class="step"><div class="num">02</div><div><strong>Si lo estás viendo:</strong><br>No te sumes a las burlas ni compartas publicaciones. Acompaña a la persona, escucha sin juzgar y pide apoyo a alguien responsable.</div></div><div class="step"><div class="num">03</div><div><strong>Si participaste:</strong><br>Detente, reconoce el daño, ofrece una disculpa sincera y cambia tu conducta. No lo justifiques diciendo que “era jugando”.</div></div></div></section>
+<div class="quote">“SER RESPETADO NO ES TENER MIEDO. ES PODER SER TÚ SIN QUE TE HUMILLEN.”</div>
+<section id="compromiso"><div class="eyebrow">06 / HAZ QUE CUENTE</div><h2>MI <em>COMPROMISO</em></h2><p class="intro">Elige acciones que sí puedes cumplir desde hoy:</p><div class="grid"><article class="card"><h3>Respeto</h3><p>Tratar a los demás sin insultos ni humillaciones.</p></article><article class="card"><h3>Empatía</h3><p>Pensar cómo se puede sentir la otra persona antes de actuar.</p></article><article class="card"><h3>Apoyo</h3><p>No dejar sola a una persona que está pasando por esto.</p></article><article class="card"><h3>Responsabilidad</h3><p>Reportar la situación y no difundir contenido que lastime.</p></article></div></section>
+<section><div class="eyebrow">07 / PON A PRUEBA LO QUE SABES</div><h2>¿BROMA O <em>BULLYING?</em></h2><div class="quiz"><p><strong>Si un grupo se burla repetidamente de un compañero y lo excluye, ¿qué es lo mejor que puedes hacer?</strong></p><label><input type="radio" name="q" value="a"> Reírte para no quedar fuera.</label><label><input type="radio" name="q" value="b"> No participar, apoyarlo y buscar ayuda.</label><label><input type="radio" name="q" value="c"> Compartirlo en redes para que todos sepan.</label><button onclick="check()">Comprobar respuesta</button><div class="result" id="result" aria-live="polite"></div></div></section>
+</main>
+<footer><strong>EL RESPETO TAMBIÉN HACE RUIDO.</strong><p>Una escuela segura se construye entre todos. No al bullying.</p>
+<div class="refs"><h4>Referencias</h4>
+<p>Olivares García, I., &amp; Benites Hernández, A. (s. f.). <em>NO AL BULLYNG - campaña contra el bullyng</em> [Video]. YouTube. <a href="https://youtu.be/_9x9UP9MEzo" target="_blank" rel="noopener">https://youtu.be/_9x9UP9MEzo</a></p>
+<p>Universidad Autónoma del Estado de Hidalgo. (2019). <em>Reglamento escolar</em> [Acta núm. 348, aprobada el 20 de octubre de 2018]. Honorable Consejo Universitario. <a href="https://www.uaeh.edu.mx/adminyserv/dir_generales/juridica/pdf/2019/ReglamentoEscolar-Acta348.pdf" target="_blank" rel="noopener">https://www.uaeh.edu.mx/adminyserv/dir_generales/juridica/pdf/2019/ReglamentoEscolar-Acta348.pdf</a></p>
+<p>Wikimedia Commons. (s. f.). <em>Día Mundial Contra el Bullying</em> [Imagen]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:D%C3%ADa_Mundial_Contra_el_Bullying.png" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:D%C3%ADa_Mundial_Contra_el_Bullying.png</a></p>
+<p>Wikimedia Commons. (s. f.). <em>Bullying físico</em> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Bullying_F%C3%ADsico.JPG" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Bullying_F%C3%ADsico.JPG</a></p>
+<p>Wikimedia Commons. (s. f.). <em>Bullying verbal</em> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Bullying_Verbal.JPG" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Bullying_Verbal.JPG</a></p>
+</div>
+<div class="creditos">Desarrollado por Olivares García Ismael y Benites Hernández Angel<span>Escuela Superior de Tizayuca</span></div></footer>
+<script>function check(){const a=document.querySelector('input[name="q"]:checked');const r=document.getElementById('result');if(!a){r.textContent="Elige una respuesta primero.";return}r.textContent=a.value==="b"?"¡Correcto! No participar y pedir apoyo puede marcar la diferencia.":"Inténtalo de nuevo. La mejor opción protege y acompaña a quien lo necesita.";}</script>
+</body></html>
